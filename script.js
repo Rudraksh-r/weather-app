@@ -103,7 +103,7 @@ function getWeatherInfo() {
 
                 let airInfo
 
-            fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${geoData.lat}&lon=${geoData.lon}&appid=${openWeatherApiKey}`)
+            fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${geoData.lat}&lon=${geoData.lon}&appid=${openWeatherApiKey}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
