@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>weather App</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="bg" id="bg">
+    <div class="input-box">
+      <input class="text-box" id="text-box" type="text" placeholder="Enter Your City">
+      <button class="button" onclick="getWeatherInfo()">Search</button>
+    </div>
+
+    <div class="temp-cont">
+      <div class="temp-card">
+        <p class="info-title">Now</p>
+        <span id="weather-info">0</span>
+        <span class="c-unit">°C</span>
+        <p class="temp-text" id="temp-desc">- <img src="assets/sun-regular.svg" clsss="defaul-icon" id="defaul-icon"/></p>
+        <br>
+        <span id="date-time"></span>
+        <span id="min-temp-info"></span>
+        <span class="c-ut1">°C</span>
+        <span id="max-temp-info"></span>
+        <span class="c-ut2">°C</span>
+        <hr>
+        <p class="info-title">Feels Like</p>
+        <span id="weather-feel-info">0</span>
+        <span class="c-unit-feel">°C</span>
+        <hr>
+        <div class="air-info-cont">
+          <p class="air-title">Air Quality</p>
+          <div class="air-info-card" id="air-info-card">
+          </div>
+        </div>
+        <img />
+
+      </div>
+    </div>
+
+    <div class="weather-info-cont">
+      <div class="weather-info-card">
+        <div class="humidity-card">
+          <p class="humidity-title">Humidity</p>
+          <span class="humidity-info" id="humidity-info">0 %</span>
+        </div>
+        <div class="pressure-card">
+          <p class="pressure-title">Pressure</p>
+          <span id="pressure-info">0 hPa</span>
+        </div>
+
+        <div class="visibility-card">
+          <p class="visibility-title">Visibility</p>
+          <span id="visibility-info">0 Km</span>
+        </div>
+        <div class="wind-speed-card">
+          <p class="wind-speed-title">wind-speed</p>
+          <span id="wind-speed-info">0 mi/h</span>
+        </div>
+        <div class="sun-info-card">
+          <p class="sunset-title">Sunset</p>
+          <span id="sunset-info">0 </span>
+          <p class="sunrise-title">Sunrise</p>
+          <span id="sunrise-info">0 </span>
+        </div>
+      </div>
+
+    </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+  
+.bg {
+    /* The image used */
+    background-image: url("assets/sunny.jpg");
+  
+    /* Full height */
+    height: 100%;
+    overflow: auto;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-box {
+    width: 100%;
+    padding: 22px 0;
+    text-align: center;
+}
+.text-box {
+    height: 34px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 34px 0 0 34px;
+    min-width: 110px;
+    max-width: 300px;
+    width: 40%;
+    padding: 0 14px;
+    outline: none;
+}
+.button {
+    height: 34px;
+    border-radius: 0 34px 34px 0;
+    padding: 0 24px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: -4px;
+}
+.button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.temp-cont {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+}
+.temp-card {
+    min-width: 250px;
+    width: 30%;
+    background-color: rgba(0,0,0, 0.6); 
+    border-radius: 34px;
+    padding: 24px;
+}
+.info-title {
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+#weather-info {
+    font-size: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+}
+.c-unit {
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 0px;
+}
+.temp-text {
+    display: inline;
+    font-size: 19px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+#weather-feel-info {
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+}
+.c-unit-feel {
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 0px;
+}
+#date-time {
+    display: block;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.weather-info-cont {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;   
+}
+.weather-info-card {
+    display: flex;
+    justify-content:space-evenly;
+    min-width: 250px;
+    width: 60%; 
+    border-radius: 34px;
+    padding: 24px;
+    overflow:hidden;
+}
+#min-temp-info {
+    display: inline;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.c-ut1 {
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    padding-left: 0px;
+}
+#max-temp-info {
+    display: inline-block;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.c-ut2 {
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    padding-left: 0px;
+}
+.humidity-card {
+   margin: 0;
+   width: 120px;
+   background-color: rgba(0,0,0, 0.6);
+   border-radius: 10px;
+   padding: 5px 5px;
+   margin: 0 12px;
+}
+.humidity-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+.humidity-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
+.pressure-card {
+    margin: 0 12px;
+    width: 120px;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 10px;
+    padding: 5px 5px; 
+ }
+#pressure-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
+.pressure-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+.visibility-card {
+    margin: 0 12px;
+    width: 120px;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+.visibility-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+#visibility-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
+.wind-speed-card {
+    margin: 0 12px;
+    width: 120px;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+.wind-speed-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;   
+}
+#wind-speed-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
+
+.air-info-card {
+    background-color:black;
+    width: 95px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 15px;
+    padding: 4px;
+
+}
+.air-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;   
+}
+#defaul-icon {
+    width: 65px;
+    position: relative; 
+    left: 65px;
+    top: 10px;
+}
+.sun-info-card {
+    margin: 0 12px;
+    width: 120px;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+.sunset-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;   
+}
+.sunrise-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+#sunset-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
+#sunrise-info {
+    display: flex;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-left: 0px
+}
