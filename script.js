@@ -60,35 +60,37 @@ function getWeatherInfo() {
                         else bgImage = 'cloudy.webp';
                     }
 
-                    if (weatherData.weather[0].main == 'Clear') {
+
+                    else if (weatherData.weather[0].main == 'Clear') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'night-sky.jpg';
                         else bgImage = 'sunny.jpg';
                     }
 
-                    if (weatherData.weather[0].main == 'Rain') {
+                   else if (weatherData.weather[0].main == 'Rain') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'rainy-night-.jpg';
                         else bgImage = 'rainy.jpg';
                     }
 
-                    if (weatherData.weather[0].main == 'Mist') {
+                   else if (weatherData.weather[0].main == 'Mist') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'mist-night.jpg';
                         else bgImage = 'mist.jpg';
                     }
 
-                    if (weatherData.weather[0].main == 'Haze') {
+                   else if (weatherData.weather[0].main == 'Haze') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'haze-night.jpg';
                         else bgImage = 'haze.jpg';
                     }
 
-                    if (weatherData.weather[0].main == 'Thunderstorm') {
+                   else if (weatherData.weather[0].main == 'Thunderstorm') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'thunder-night.jpg';
                         else bgImage = 'thunder.jpg';
                     }
 
-                    if (weatherData.weather[0].main == 'Thunderstorm') {
+                   else if (weatherData.weather[0].main == 'Thunderstorm') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'thunder-night.jpg';
                         else bgImage = 'thunder.jpg';
                     }
+                  else  bgImage = 'mist.jpg' 
 
                     document.getElementById('date-time').innerText = timeData.day_of_week;
                     document.getElementById('bg').style.backgroundImage = `url(assets/${bgImage})`;
@@ -111,23 +113,29 @@ function getWeatherInfo() {
                     airInfo = data;
                     console.log(airInfo);
 
+                    let airQualityBarBgColor = '';
                     if(airInfo.list[0].main.aqi == '1'){
+                       document.getElementById('air-info-card').style.backgroundColor = '#27d93c';
                        document.getElementById('air-info-card').innerText = 'Good';
                     }
                     
                     if(airInfo.list[0].main.aqi == '2'){
+                        document.getElementById('air-info-card').style.backgroundColor = '#c9f030';
                         document.getElementById('air-info-card').innerText = 'Fair';
                      }
                      
                     if(airInfo.list[0].main.aqi == '3'){
+                        document.getElementById('air-info-card').style.backgroundColor = '#ebe838';
                         document.getElementById('air-info-card').innerText = 'Moderate';
                      }
                      
                     if(airInfo.list[0].main.aqi == '4'){
+                        document.getElementById('air-info-card').style.backgroundColor = '#f5971d';
                         document.getElementById('air-info-card').innerText = 'Poor';
                      }
                      
                     if(airInfo.list[0].main.aqi == '5'){
+                        document.getElementById('air-info-card').style.backgroundColor = '#de3b12';
                         document.getElementById('air-info-card').innerText = 'Very Poor';
                      }
                     // document.getElementById('air-info-card').innerText = airInfo.list[0].main.aqi;

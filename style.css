@@ -252,11 +252,11 @@ body, html {
 
 .air-info-card {
     background-color:black;
+    font-weight: 600;
     width: 95px;
-    color: #ffffff;
+    color: #000000;
     font-size: 12px;
     text-align: center;
-    background-color: rgba(0,0,0, 0.6);
     border-radius: 15px;
     padding: 4px;
 
@@ -269,9 +269,9 @@ body, html {
     color: #ffffff;   
 }
 #defaul-icon {
-    width: 65px;
+    width: 70px;
     position: relative; 
-    left: 65px;
+    left: 220px;
     top: 10px;
 }
 .sun-info-card {
@@ -312,4 +312,7 @@ body, html {
     color: #ffffff;
     padding-left: 10px;
     margin-left: 0px
+}
+.icon {
+    width: 12px;
 }
