@@ -3,7 +3,7 @@ function getWeatherInfo() {
 
     const textBox = document.getElementById('text-box').value;
     let geoData, weatherData;
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${textBox}&limit=${1}&appid=${openWeatherApiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${textBox}&limit=${1}&appid=${openWeatherApiKey}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
