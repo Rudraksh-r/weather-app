@@ -1,8 +1,9 @@
-const openWeatherApiKey = ('b17cf60bc918f97799256071df5f9c54')
+const openWeatherApiKey = ('b17cf60bc918f97799256071df5f9c54') // API key for OpenWeatherMap
 function getWeatherInfo() {
-
+ // Function to get weather information based on the user's input (city name)
     const textBox = document.getElementById('text-box').value;
     let geoData, weatherData;
+     // Fetch geographical coordinates (latitude and longitude) based on the city name
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${textBox}&limit=${1}&appid=${openWeatherApiKey}`)
         .then(response => {
             if (!response.ok) {
@@ -12,7 +13,8 @@ function getWeatherInfo() {
         })
         .then(data => {
             console.log(data);
-            geoData = data[0];
+            geoData = data[0];  // Store the geographical data
+             // Fetch current weather data using the retrieved geographical coordinates
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${geoData.lat}&lon=${geoData.lon}&appid=${openWeatherApiKey}`)
                 .then(response => {
                     if (!response.ok) {
@@ -22,7 +24,8 @@ function getWeatherInfo() {
                 })
                 .then(async data => {
                     console.log(data);
-                    weatherData = data;
+                    weatherData = data; // Store the weather data
+                     // Update the HTML elements with the fetched weather data
                     document.getElementById('weather-info').innerText = Math.round(weatherData.main.temp - 273.15);
                     document.getElementById('weather-feel-info').innerText = Math.round(weatherData.main.feels_like - 273.15);
                     document.getElementById('temp-desc').innerText = weatherData.weather[0].description;
@@ -35,6 +38,7 @@ function getWeatherInfo() {
                     document.getElementById('sunset-info').innerText = new Date(weatherData.sys.sunset * 1000).getHours() + ':' + new Date(weatherData.sys.sunset * 1000).getMinutes();
                     document.getElementById('sunrise-info').innerText = new Date(weatherData.sys.sunrise * 1000).getHours() + ':' + new Date(weatherData.sys.sunrise * 1000).getMinutes();
 
+                     // Fetch current time based on geographical coordinates and city name
                     const url = `https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?lat=${geoData.lat}&lon=${geoData.lon}&city=${textBox}`;
                     const options = {
                         method: 'GET',
@@ -54,6 +58,7 @@ function getWeatherInfo() {
                         console.error(error);
                     }
 
+                     // Determine the background image based on weather conditions and time of day
                     let bgImage = '';
                     if (weatherData.weather[0].main == 'Clouds') {
                         if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'cloudy-night-sky.jpg';
@@ -91,7 +96,7 @@ function getWeatherInfo() {
                         else bgImage = 'thunder.jpg';
                     }
                   else  bgImage = 'mist.jpg' 
-
+ // Update the date-time and background image in the HTML
                     document.getElementById('date-time').innerText = timeData.day_of_week;
                     document.getElementById('bg').style.backgroundImage = `url(assets/${bgImage})`;
 
@@ -101,6 +106,7 @@ function getWeatherInfo() {
                     console.error('Error:', error);
                 });
 
+             // Fetch air quality information
                 let airInfo
 
             fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${geoData.lat}&lon=${geoData.lon}&appid=${openWeatherApiKey}`)
@@ -113,6 +119,7 @@ function getWeatherInfo() {
                     airInfo = data;
                     console.log(airInfo);
 
+                     // Update the air quality card's color and text based on AQI value
                     let airQualityBarBgColor = '';
                     if(airInfo.list[0].main.aqi == '1'){
                        document.getElementById('air-info-card').style.backgroundColor = '#27d93c';
