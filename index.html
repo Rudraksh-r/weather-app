@@ -2,6 +2,7 @@
 <html lang="en">
   <!--This is the root HTML file-->
 <head>
+  <!-- Metadata about the document -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -10,15 +11,20 @@
 </head>
 
 <body>
+  <!-- Metadata about the document -->
   <div class="bg" id="bg">
     <div class="input-box">
+       <!-- Container for the input elements -->
       <input class="text-box" id="text-box" type="text" placeholder="Enter Your City">
+        <!-- Button to trigger the weather information fetch -->
       <button class="button" onclick="getWeatherInfo()"><img src="assets/magnifying-glass-solid (1).svg" class="icon"/>
       </button>
     </div>
 
     <div class="temp-cont">
+       <!-- Container for temperature-related information -->
       <div class="temp-card">
+         <!-- Card displaying the main temperature info -->
         <p class="info-title">Now</p>
         <span id="weather-info">0</span>
         <span class="c-unit">°C</span>
@@ -43,7 +49,8 @@
 
       </div>
     </div>
-
+ <!-- This Container is for additional weather information -->
+     <!-- Card for displaying various weather-related metrics -->
     <div class="weather-info-cont">
       <div class="weather-info-card">
         <div class="humidity-card">
@@ -63,6 +70,7 @@
           <p class="wind-speed-title">wind-speed</p>
           <span id="wind-speed-info">0 mi/h</span>
         </div>
+        <!-- Sun info card (Sunrise and Sunset) -->
         <div class="sun-info-card">
           <p class="sunset-title">Sunset</p>
           <span id="sunset-info">0 </span>
