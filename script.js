@@ -56,41 +56,37 @@ function getWeatherInfo() {
 
                     let bgImage = '';
                     if (weatherData.weather[0].main == 'Clouds') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'cloudy-night-sky.jpg';
-                        else bgImage = 'cloudy.webp';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'black gold background.webp';
+                        else bgImage = 'Cloud-sky.webp';
                     }
 
 
                     else if (weatherData.weather[0].main == 'Clear') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'night-sky.jpg';
-                        else bgImage = 'sunny.jpg';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'Clear-night-sky.webp';
+                        else bgImage = 'Clear-day.webp';
                     }
 
                    else if (weatherData.weather[0].main == 'Rain') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'rainy-night-.jpg';
-                        else bgImage = 'rainy.jpg';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'rainy.webp';
+                        else bgImage = 'rainy.webp';
                     }
 
                    else if (weatherData.weather[0].main == 'Mist') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'mist-night.jpg';
-                        else bgImage = 'mist.jpg';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'Mist.webp';
+                        else bgImage = 'Mist.webp';
                     }
 
                    else if (weatherData.weather[0].main == 'Haze') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'haze-night.jpg';
-                        else bgImage = 'haze.jpg';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'Haze.webp';
+                        else bgImage = 'Haze.webp';
                     }
 
                    else if (weatherData.weather[0].main == 'Thunderstorm') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'thunder-night.jpg';
-                        else bgImage = 'thunder.jpg';
+                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'Thunderstorm.webp';
+                        else bgImage = 'Thunderstorm.webp';
                     }
 
-                   else if (weatherData.weather[0].main == 'Thunderstorm') {
-                        if (timeData.hour >= 19 || timeData.hour <= 5) bgImage = 'thunder-night.jpg';
-                        else bgImage = 'thunder.jpg';
-                    }
-                  else  bgImage = 'mist.jpg' 
+                  else  bgImage = 'else-img.webp' 
 
                     document.getElementById('date-time').innerText = timeData.day_of_week;
                     document.getElementById('bg').style.backgroundImage = `url(assets/${bgImage})`;

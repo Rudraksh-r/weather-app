@@ -5,7 +5,7 @@ body, html {
   
 .bg {
     /* The image used */
-    background-image: url("assets/sunny.jpg");
+    background-image: url("assets/Clear-day.webp");
   
     /* Full height */
     height: 100%;
@@ -54,7 +54,7 @@ body, html {
     justify-content: center;
 }
 .temp-card {
-    min-width: 250px;
+    min-width: 200px;
     width: 30%;
     background-color: rgba(0,0,0, 0.6); 
     border-radius: 34px;
